@@ -58,27 +58,26 @@ conky.config = {
 };
 
 conky.text = [[
-${default_color}${time %Y}-${time %m}-${time %d} ${time %a} ${time %H}:${time %M}
-${color0}$hr
-${default_color}System Uptime: $uptime
-${default_color}Battery: ${battery} $battery_time
-${color0}$hr
-${default_color}CPU: ${cpu cpu0}% ${color2}${cpubar cpu0}
-${default_color}Core 1 ${cpu cpu1}% ${color1}${cpubar cpu1}
-${default_color}Core 2 ${cpu cpu2}% ${color1}${cpubar cpu2}
-${default_color}Clock Speed: ${freq 0} MHz
-${default_color}${cpugraph 26,190 color3 color3 -l}
-${color0}$hr
-${default_color}RAM: ${memperc}% ${color2}${membar}
-${default_color}Used: ${mem}    Free: ${memfree}    Total: ${memmax}
-${default_color}${memgraph 26,190 color3 color3 -l}
-${color0}$hr
-${default_color}/    ${alignr 200} ${fs_used /} / ${fs_size /}  ${color2}${fs_bar 6 /}
-${default_color}${diskio sda} ${alignr 200}Reads: ${diskio_read sda} Writes: ${diskio_write sda}
-${default_color}${diskiograph 26,190 color3 color3 -l}
-${color0}$hr
-${default_color}wlo1 IP: ${addr wlo1}
-${default_color}Network Traffic ↑: ${color3}${upspeed wlo1}
-${default_color}Network Traffic ↓: ${color2}${downspeed wlo1}
-
+${time %Y}-${time %m}-${time %d} ${time %a} ${time %H}:${time %M}\
+${color0}${hr}\
+System Uptime: ${uptime}\
+Battery: ${battery} ${battery_time}\
+${color0}${hr}\
+CPU: ${cpu cpu0}% ${color2}${cpubar cpu0}\
+Core 1 ${cpu cpu1}% ${color1}${cpubar cpu1}\
+Core 2 ${cpu cpu2}% ${color1}${cpubar cpu2}\
+Clock Speed: ${freq 0} MHz\
+${cpugraph 26,${minimum_width} FFFFFF FFFFFF -l}\
+${color0}${hr}\
+RAM: ${memperc}% ${color2}${membar}\
+Used: ${mem}    Free: ${memfree}    Total: ${memmax}\
+${memgraph 26,${minimum_width} FFFFFF FFFFFF -l}\
+${color0}${hr}\
+/    ${alignr 200} ${fs_used /} / ${fs_size /}  ${color2}${fs_bar 6 /}\
+${diskio sda} ${alignr 200}Reads: ${diskio_read sda} Writes: ${diskio_write sda}\
+${diskiograph 26,${minimum_width} FFFFFF FFFFFF -l}\
+${color0}${hr}\
+wlo1 IP: ${addr wlo1}\
+Network Traffic ↑: ${color3}${upspeed wlo1}\
+Network Traffic ↓: ${color2}${downspeed wlo1}\
 ]];
