@@ -25,13 +25,13 @@ conky.config = {
 	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 
 	alignment = 'top_right',
-	minimum_width = 350,
-	minimum_height = 760,
+	minimum_width = 250,
+	minimum_height = 200,
 	border_inner_margin = 0,
 	border_outer_margin = 0,
 	
-  	gap_x = 5, --x offset relative to alignment
-	gap_y = 15, --y offset relative to alignment
+  	gap_x = 0, --x offset relative to alignment
+	gap_y = -5, --y offset relative to alignment
 	
 -- Graphics settings
 	draw_shades = false,
@@ -49,7 +49,7 @@ conky.config = {
 
 -- Text settings
 	use_xft = true,
-	font = 'Ubuntu:size=9',
+	font = 'Ubuntu:size=7',
 	override_utf8_locale = true,
 	text_buffer_size = 2048,
 	xftalpha = 0.8,
@@ -58,23 +58,19 @@ conky.config = {
 };
 
 conky.text = [[
-${color3}${time %Y}-${time %m}-${time %d} ${time %a} ${time %H}:${time %M}
 $hr
 ${color3}System Uptime: ${uptime}
 ${color3}Battery: ${battery} ${battery_time}
 $hr
 ${color3}CPU: ${cpu cpu0}% ${color2}${cpubar cpu0}
-${color3}Core 1 ${cpu cpu1}% ${color1}${cpubar cpu1}
-${color3}Core 2 ${cpu cpu2}% ${color1}${cpubar cpu2}
+${color3}Core 1   ${cpu cpu1}% ${color1}${cpubar cpu1}
+${color3}Core 2   ${cpu cpu2}% ${color1}${cpubar cpu2}
 ${color3}Clock Speed: ${freq 0} MHz
-${color3}${cpugraph 45,200 FFFFFF FFFFFF -l}
 $hr
 ${color3}RAM: ${memperc}% ${color2}${membar}
-${color3}Used: ${mem}    Free: ${memeasyfree}    Total: ${memmax}
-${color3}${memgraph 45 200 FFFFFF FFFFFF -l}
+${color3}Used: ${mem} Free: ${memeasyfree} Total: ${memmax}
 $hr
-${color3}/    ${alignr 200} ${fs_used /} / ${fs_size /}  ${color2}${fs_bar /}
-${color3}${diskio sda} ${diskiograph 45 200 FFFFFF FFFFFF -l}
+${color3}File-System: ${alignr 200} ${fs_used /} / ${fs_size /}  ${color2}${fs_bar /}
 ${color3}Reads: ${diskio_read sda} Writes: ${diskio_write sda}
 $hr
 ${color3}wlo1 IP: ${addr wlo1}
