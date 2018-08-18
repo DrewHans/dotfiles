@@ -11,4 +11,5 @@ endfu
 
 com! SC call TurnSpellCheckOn()
 
-
+" turns off expandtab (which converts tabs to spaces) ONLY for make files
+autocmd FileType make setlocal noexpandtab 
