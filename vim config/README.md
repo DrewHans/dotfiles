@@ -1,2 +1,5 @@
 ### vim config
-* **.vimrc** - contains vim configuration (location: ~/.vimrc)
+
+* **.vimrc** - contains vim configuration
+  * file location: ~/.vimrc
+  

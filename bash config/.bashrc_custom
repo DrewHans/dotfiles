@@ -1,0 +1,6 @@
+# this is a user-custom bashrc file to keep clean the default ~/.bashrc file
+
+# Add a new line at the end of the command prompt, improves prompt readability when several directories deep
+#PS1=${PS1}\\n
+PS1=${PS1%?}
+PS1=${PS1%?}\n'$ '
