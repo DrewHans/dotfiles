@@ -2,8 +2,14 @@
     name = DrewHans555
     email = drewhans555@gmail.com
 
+[color]
+    ui = true
+
 [core]
     editor = vim
+
+[credential]
+    helper = cache --timeout=3600
 
 [alias]
     #########################################################################
