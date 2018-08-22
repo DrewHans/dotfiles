@@ -2,44 +2,25 @@
 set background=dark
 colorscheme darkblue
 
-" highlight current line
-set cursorline
+set cursorline " highlight current line
+set encoding=utf-8 " set the encoding displayed in terminal
+set expandtab " convert tabs to spaces
+set fileencoding=utf-8 " set the encoding written to file
+set mouse=a " enable mouse in all modes
+set number " show line numbers
+set ruler " show the cursor position
+set shiftwidth=4 " make indentations width 4 spaces wide
+set showmode " show the current mode
+set softtabstop=4 " while editing files, make new tabs as wide as 4 spaces
+set tabstop=4 " when viewing files, make existing tabs as wide as 4 spaces
+set title " show the filename in the window titlebar
+syntax on " enable syntax highlighting
 
-" convert tabs to spaces
-set expandtab
-
-" enable mouse in all modes
-set mouse=a
-
-" enable line numbers
-set number
-
-" show the cursor position
-set ruler
-
-" make indentations width 4 spaces wide
-set shiftwidth=4
-
-" show the current mode
-set showmode
-
-" make tabs as wide as 4 spaces while performing editing operations
-set softtabstop=4
-
-" make tabs as wide as 4 spaces
-set tabstop=4
-
-" show the filename in the window titlebar
-set title
-
-" enable syntax highlighting
-syntax on
-
-" create custom command to turn spellcheck on/off
+" custom function to turn spellcheck on/off
 func! TurnSpellCheckOn()
   setlocal spell spelllang=en_us
 endfu
-com! SC call TurnSpellCheckOn()
+com! SC call TurnSpellCheckOn() " toggle spellcheck on/off with :SC command
 
 " turns off expandtab (which converts tabs to spaces) ONLY for make files
 autocmd FileType make setlocal noexpandtab 
