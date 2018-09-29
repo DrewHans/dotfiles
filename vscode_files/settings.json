@@ -1,14 +1,14 @@
 {
     "csharp.format.enable": true,
     "editor.rulers": [80, 120],
-    "explorer.confirmDragAndDrop": false,
     "explorer.autoReveal": false,
+    "explorer.confirmDragAndDrop": false,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
+    "update.channel": "none",
     "window.zoomLevel": 0,
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#b4003c"
-    },
-    "workbench.iconTheme": "material-icon-theme",
-    "update.channel": "none"
+    }
 }
