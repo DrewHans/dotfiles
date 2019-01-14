@@ -16,20 +16,20 @@
     ## This alias pulls changes from the remote, rebases any local commits to 
     ##  come after the commits pulled down, then removes remote-tracking
     ##  branches that no longer exist on the remote.
-    ## use: git update
+    ## use: git up
     up = !git pull --rebase --prune $@ && \
           git submodule update --init --recursive
     
     #########################################################################
-    ## These alias allow you to create / undo a commit savepoint, useful 
-    ##  when it's time for lunch
-    ## use: git save 
-    ## use: git unsave
-    save = !git add -A && git commit -m 'SAVEPOINT'
-    unsave = reset HEAD~1 --mixed
+    ## These aliases allow you to create & undo a temporary commit savepoint
+    ##  (useful when it's time to leave for lunch)
+    ## use: git savepoint
+    ## use: git unsavepoint
+    savepoint = !git add -A && git commit -m 'TEMPORARY SAVEPOINT'
+    unsavepoint = reset HEAD~1 --mixed
 
     #########################################################################
-    ## These alias allow you to search for / switch to a branch
+    ## These aliases allow you to search for / switch to a branch
     ## use: git which <branch name>
     ## use: git lucky <branch name>
     which = !git branch | grep -i
@@ -46,12 +46,15 @@
 
     #########################################################################
     ## These aliases open the git repo location in your web browser
-    ## use: git open OR git browse
+    ##  (I originally just had 'open' set but kept typing 'browse' by 
+    ##  mistake so I just decided to have both available)
+    ## use: git open
+    ## use: git browse
     open = "!f() { REPO_URL=$(git config remote.origin.url); explorer ${REPO_URL%%.git}; }; f"
     browse = !git open
 
     #########################################################################
-    ## These aliases show pretty logs
+    ## These aliases show pretty logs (I got these from some Git Universe presentation)
     ## use: git lg1
     lg1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
     lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
@@ -64,7 +67,8 @@
     lg = !"git lg1"
 
     #########################################################################
-    ## These aliases are just easy to remember
+    ## These are old aliases I used all the time when I was new to git
+    ##  and are just easy for me to remember
     unadd = reset HEAD~1
     uncommit = reset --soft HEAD~1
     branches = branch -a
