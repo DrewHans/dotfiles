@@ -1,6 +1,8 @@
 {
     "csharp.format.enable": true,
+    "editor.insertSpaces": true,
     "editor.rulers": [80, 120],
+    "editor.tabSize": 4,
     "explorer.autoReveal": false,
     "explorer.confirmDragAndDrop": false,
     "telemetry.enableCrashReporter": false,
@@ -10,5 +12,21 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#b4003c"
+    },
+    "[c]": {
+        "editor.rulers": [79]
+    },
+    "[csharp]": {
+        "editor.rulers": [100]
+    },
+    "[json]": {
+        "editor.tabSize": 2
+    },
+    "[makefile]": {
+        "editor.insertSpaces": false,
+    },
+    "[python]": {
+        "editor.rulers": [72, 79]
+        //https://www.python.org/dev/peps/pep-0008/
     }
 }
