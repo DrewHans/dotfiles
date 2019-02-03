@@ -27,6 +27,5 @@
     },
     "[python]": {
         "editor.rulers": [72, 79]
-        //https://www.python.org/dev/peps/pep-0008/
     }
 }
