@@ -31,6 +31,7 @@
         "editor.rulers": [72, 79]
     },
     "python.linting.pylintArgs": [
-        "--load-plugins=pylint_django"
+        "--load-plugins=pylint_django",
+        "--disable=C0111",
     ],
 }
