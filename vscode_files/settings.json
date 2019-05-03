@@ -1,7 +1,7 @@
 {
     "csharp.format.enable": true,
     "editor.insertSpaces": true,
-    "editor.renderWhitespace": "all",
+    "editor.renderWhitespace": "boundary",
     "editor.rulers": [80, 120],
     "editor.tabSize": 4,
     "explorer.autoReveal": false,
