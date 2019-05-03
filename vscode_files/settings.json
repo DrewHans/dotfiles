@@ -8,7 +8,7 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "update.mode": "none",
+    "update.channel": "none",
     "window.zoomLevel": 0,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {
@@ -28,5 +28,8 @@
     },
     "[python]": {
         "editor.rulers": [72, 79]
-    }
+    },
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django"
+    ],
 }
