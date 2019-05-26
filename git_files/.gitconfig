@@ -11,67 +11,63 @@
 [credential]
     helper = cache --timeout=3600
 
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+
 [alias]
-    #########################################################################
-    ## This alias pulls changes from the remote, rebases any local commits to 
-    ##  come after the commits pulled down, then removes remote-tracking
-    ##  branches that no longer exist on the remote.
-    ## use: git up
+    aa = add -A
+    br = branch
+    ci = commit
+    co = checkout
+    last = log -1 HEAD
+    st = status
+    ############################################################################
     up = !git pull --rebase --prune $@ && \
           git submodule update --init --recursive
-    
-    #########################################################################
-    ## These aliases allow you to create & undo a temporary commit savepoint
-    ##  (useful when it's time to leave for lunch)
-    ## use: git savepoint
-    ## use: git unsavepoint
+    ## This alias pulls changes from the remote, rebases any local commits to
+    ##  come after the commits pulled down, then removes remote-tracking
+    ##  branches that no longer exist on the remote.
+    ############################################################################
     savepoint = !git add -A && git commit -m 'TEMPORARY SAVEPOINT'
     unsavepoint = reset HEAD~1 --mixed
-
-    #########################################################################
+    ## These aliases allow you to create & undo a temporary commit savepoint.
+    ##  Useful when it's time to leave for lunch.
+    ############################################################################
+    which = !git branch | grep -i
+    lucky = !bash -c 'git checkout $(git which $1 -m1)' - 
     ## These aliases allow you to search for / switch to a branch
     ## use: git which <branch name>
     ## use: git lucky <branch name>
-    which = !git branch | grep -i
-    lucky = !bash -c 'git checkout $(git which $1 -m1)' - 
-
-    #########################################################################
-    ## This alias starts up a local git daemon server
-    ## use: git serve
+    ############################################################################
     serve = daemon \
             --reuseaddr \
             --verbose \
             --base-path=. \
             --export-all ./.git
-
-    #########################################################################
-    ## These aliases open the git repo location in your web browser
-    ##  (I originally just had 'open' set but kept typing 'browse' by 
-    ##  mistake so I just decided to have both available)
-    ## use: git open
-    ## use: git browse
+    ## This alias starts up a local git daemon server
+    ############################################################################
     open = "!f() { REPO_URL=$(git config remote.origin.url); explorer ${REPO_URL%%.git}; }; f"
     browse = !git open
-
-    #########################################################################
-    ## These aliases show pretty logs (I got these from some Git Universe presentation)
-    ## use: git lg1
+    ## open the git repo location in your web browser
+    ############################################################################
     lg1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
     lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
     lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
-
     lg1 = !"git lg1-specific --all"
     lg2 = !"git lg2-specific --all"
     lg3 = !"git lg3-specific --all"
-
     lg = !"git lg1"
-
-    #########################################################################
-    ## These are old aliases I used all the time when I was new to git
-    ##  and are just easy for me to remember
+    ## These aliases show pretty logs (source: Git Aliases Of The Gods)
+    ############################################################################
     unadd = reset HEAD~1
     uncommit = reset --soft HEAD~1
     branches = branch -a
     tags = tag -n1 --list
     stashes = stash list
     pushb = push --set-upstream origin
+    ## These are old aliases I used all the time when I was new to git
+    ##  and are just easy for me to remember
+    ############################################################################
