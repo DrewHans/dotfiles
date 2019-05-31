@@ -6,6 +6,7 @@
     ui = true
 
 [core]
+    autocrlf = true
     editor = vim
 
 [credential]
