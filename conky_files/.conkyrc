@@ -122,6 +122,6 @@ ${alignr}${color2}${sysname} ${machine}${color}
     ${color9}${downspeedgraph enp2s0 50,110 0064c8 0064c8 7000} ${alignr}${color8}${upspeedgraph enp2s0 50,110 00c800 00c800 1000}${color}
     ${color9}Total >> ${totaldown enp2s0} ${alignr}${color8}${totalup enp2s0} << Total
 \
-${image ~/.conky/conky_bg.png -p -0,-0 -s 250x1050}\
-${image ~/.conky/ubuntu-logo.png -p 8,4 -s 75x75}\
+${image ~/.config/conky/conky_bg.png -p -0,-0 -s 250x1050}\
+${image ~/.config/conky/ubuntu-logo.png -p 8,4 -s 75x75}\
 ]];

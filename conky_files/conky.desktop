@@ -1,6 +1,8 @@
 [Desktop Entry]
-Type=Application
-Name=conky
-Exec=conky --daemonize --pause=5 -c ~/.conky/.conky.conf
-StartupNotify=false
+Name=Conky
+GenericName=System Monitor
+Comment=Run conky with your .conky.conf at startup
+Exec=conky -c ~/.conkyrc --daemonize --pause=5 
 Terminal=false
+Type=Application
+StartupNotify=false
