@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=/home/nyancat/scripts/startup.bash >> /home/nyancat/scripts/log.txt 2>&1
+Exec=sh -c "\$HOME/scripts/startup.bash >> \$HOME/scripts/log.txt 2>&1"
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
