@@ -9,12 +9,13 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "update.channel": "none",
+    "update.mode": "none",
     "window.zoomLevel": 0,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#b4003c"
     },
+    "workbench.colorTheme": "One Dark Pro",
     "[c]": {
         "editor.rulers": [79]
     },
