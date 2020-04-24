@@ -1,8 +1,8 @@
 ### conky config
 
-* **conky_bg.png** - conky asset
-  * file location: ~/.config/conky/conky_bg.png
-* **conky.conf** - conky config
+* **conky.conf** - conky config for text panel
   * file location: ~/.config/conky/conky.conf
-* **ubuntu-logo.png** - conky asset
+* **conky_images.conf** - conky config for images
+  * file location: ~/.config/conky/conky_images.conf
+* **ubuntu-logo.png** - conky image asset
   * file location: ~/.config/conky/ubuntu-logo.png
