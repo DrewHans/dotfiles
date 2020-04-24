@@ -26,8 +26,8 @@ chmod 754 ~/.config/autostart/startup.bash.desktop
 cp -ru ./config/conky ~/.config/
 dos2unix ~/.config/conky/conky.conf
 chmod 754 ~/.config/conky/conky.conf
-chmod 644 ~/.config/conky/conky_bg.png
-chmod 644 ~/.config/conky/ubuntu-logo.png
+chmod 444 ~/.config/conky/conky_bg.png
+chmod 444 ~/.config/conky/ubuntu-logo.png
 
 
 
