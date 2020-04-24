@@ -18,16 +18,19 @@ done
 
 
 cp -ru ./config/autostart ~/.config/
+rm ~/.config/autostart/README.md
 dos2unix ~/.config/autostart/startup.bash.desktop
 chmod 754 ~/.config/autostart/startup.bash.desktop
 
 
 
 cp -ru ./config/conky ~/.config/
+rm ~/.config/conky/README.md
 dos2unix ~/.config/conky/conky.conf
+dos2unix ~/.config/conky/conky_images.conf
 chmod 754 ~/.config/conky/conky.conf
-chmod 444 ~/.config/conky/conky_bg.png
-chmod 444 ~/.config/conky/ubuntu-logo.png
+chmod 754 ~/.config/conky/conky_images.conf
+chmod 664 ~/.config/conky/ubuntu-logo.png
 
 
 
