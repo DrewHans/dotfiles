@@ -1,11 +1,12 @@
 {
+    "editor.accessibilitySupport": "off",
     "editor.insertSpaces": true,
     "editor.lineNumbers": "on",
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [
         { "column": 80, "color": "#00A000" },
         { "column": 100, "color": "#AAAA00" },
-        { "column": 120, "color": "#A00000" }
+        { "column": 120, "color": "#AA0000" }
     ],
     "editor.suggestSelection": "first",
     "editor.tabSize": 4,
@@ -20,8 +21,7 @@
     "update.mode": "none",
     "window.zoomLevel": 0,
     "workbench.colorCustomizations": { "editorRuler.foreground": "#b4003c" },
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Atom One Dark",
     "workbench.sideBar.location": "left",
     "[sql]": {
         "editor.defaultFormatter": "Microsoft.mssql"

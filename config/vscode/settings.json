@@ -6,7 +6,7 @@
     "editor.rulers": [
         { "column": 80, "color": "#00A000" },
         { "column": 100, "color": "#AAAA00" },
-        { "column": 120, "color": "#A00000" }
+        { "column": 120, "color": "#AA0000" }
     ],
     "editor.suggestSelection": "first",
     "editor.tabSize": 4,
