@@ -1,5 +1,4 @@
 {
-    "editor.accessibilitySupport": "off",
     "editor.insertSpaces": true,
     "editor.lineNumbers": "on",
     "editor.renderWhitespace": "boundary",
@@ -14,9 +13,6 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": true,
-    "java.home":"${env:JAVA_HOME}",
-    "python.languageServer": "Microsoft",
-    "python.pythonPath": "${env:python3}",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.integrated.scrollback": 100000,
@@ -27,26 +23,7 @@
     "workbench.colorTheme": "One Dark Pro",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.sideBar.location": "left",
-    "[c]": {
-        "editor.rulers": [ { "column": 79, "color": "#A00000" } ]
-    },
-    "[javascript]": {
-        "editor.tabSize": 2,
-        "editor.insertSpaces": true,
-        "editor.detectIndentation": true
-    },
-    "[json]": {
-        "editor.tabSize": 2,
-        "editor.insertSpaces": true,
-        "editor.detectIndentation": true
-    },
-    "[makefile]": {
-        "editor.insertSpaces": false,
-    },
-    "[python]": {
-        "editor.rulers": [
-            { "column": 72, "color": "#008000" },
-            { "column": 79, "color": "#FF0000" }
-        ]
+    "[sql]": {
+        "editor.defaultFormatter": "Microsoft.mssql"
     },
 }

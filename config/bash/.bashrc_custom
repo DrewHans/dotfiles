@@ -12,3 +12,6 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 # Add a new line at the end of the command prompt, improves prompt readability when several directories deep
 PS1=${PS1%?}
 PS1=${PS1%?}\n'$ '
+
+# Add gallery-dl to path
+export PATH=$PATH:/home/nyancat/.local/bin
