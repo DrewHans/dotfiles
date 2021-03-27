@@ -4,12 +4,12 @@
         "command": "editor.action.format"
     },
     {
-        "key": "ctrl+shift+u",
+        "key": "ctrl+alt+u",
         "command": "editor.action.transformToUppercase",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+l",
+        "key": "ctrl+alt+l",
         "command": "editor.action.transformToLowercase",
         "when": "editorTextFocus"
     }
