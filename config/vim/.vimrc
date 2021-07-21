@@ -26,6 +26,7 @@ set showmode " show the current mode
 set softtabstop=4 " while editing files, make new tabs as wide as 4 spaces
 set tabstop=4 " when viewing files, make existing tabs as wide as 4 spaces
 set title " show the filename in the window titlebar
+set laststatus=2 " show status bar at the bottom
 autocmd FileType make setlocal noexpandtab " turn off expandtab ONLY for make files
 
 " set vim functions
