@@ -1,0 +1,11 @@
+
+# include alias definitions
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# include custom `.bashrc` code
+if [ -f ~/.bash_custom ]; then
+    . ~/.bash_custom
+fi
+

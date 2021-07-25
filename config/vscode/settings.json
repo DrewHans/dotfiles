@@ -6,7 +6,7 @@
     "editor.rulers": [
         { "column": 80, "color": "#00A000" },
         { "column": 100, "color": "#AAAA00" },
-        { "column": 120, "color": "#AA0000" }
+        { "column": 120, "color": "#A00000" }
     ],
     "editor.suggestSelection": "first",
     "editor.tabSize": 4,
@@ -20,11 +20,10 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.integrated.scrollback": 100000,
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "update.mode": "none",
     "window.zoomLevel": 0,
-    "workbench.colorCustomizations": { "editorRuler.foreground": "#b4003c" },
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorCustomizations": { "editorRuler.foreground": "#B4003C" },
+    "workbench.colorTheme": "Default Dark+",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.sideBar.location": "left",
     "[c]": {
@@ -41,12 +40,12 @@
         "editor.detectIndentation": true
     },
     "[makefile]": {
-        "editor.insertSpaces": false,
+        "editor.insertSpaces": false
     },
     "[python]": {
         "editor.rulers": [
             { "column": 72, "color": "#008000" },
-            { "column": 79, "color": "#FF0000" }
+            { "column": 79, "color": "#A00000" }
         ]
-    },
+    }
 }
