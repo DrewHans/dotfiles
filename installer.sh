@@ -21,6 +21,7 @@ cp -u ./config/bash/.bash_custom ~/
 dos2unix ~/.bash_custom
 chmod 664 ~/.bash_custom
 
+dos2unix ./config/bash/append_to_bashrc.txt
 cat ./config/bash/append_to_bashrc.txt | sudo tee -a ~/.bashrc
 
 # copy git config files
