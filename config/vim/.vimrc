@@ -11,7 +11,6 @@ endif
 " set vim colors
 set background=dark " for the dark version
 syntax on " enable syntax highlighting
-colorscheme onedark
 
 " set vim behavior
 set cursorline " highlight current line
