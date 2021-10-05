@@ -6,11 +6,13 @@
     ui = true
 
 [core]
-    autocrlf = true
+    # editor called when writing commit messages
     editor = vim
 
-[credential]
-    helper = cache --timeout=3600
+    # autocrlf controls file line endings
+    autocrlf = input
+    # autocrlf = input => for Linux/OSX
+    # autocrlf = true => for Windows
 
 [filter "lfs"]
     required = true
@@ -25,35 +27,48 @@
     co = checkout
     last = log -1 HEAD
     st = status
+
     ############################################################################
+    # This alias pulls changes from the remote, rebases any local commits to come after the commits
+    # pulled down, then removes remote-tracking branches that no longer exist on the remote
+
     up = !git pull --rebase --prune $@ && \
           git submodule update --init --recursive
-    ## This alias pulls changes from the remote, rebases any local commits to
-    ##  come after the commits pulled down, then removes remote-tracking
-    ##  branches that no longer exist on the remote.
+
+
     ############################################################################
-    savepoint = !git add -A && git commit -m 'TEMPORARY SAVEPOINT'
+    # These aliases allow you to create & undo a temporary commit savepoint
+
+    savepoint = !git add -A && git commit -m 'SAVEPOINT'
     unsavepoint = reset HEAD~1 --mixed
-    ## These aliases allow you to create & undo a temporary commit savepoint.
-    ##  Useful when it's time to leave for lunch.
+
     ############################################################################
+    # These aliases allow you to search for / switch to a branch
+
     which = !git branch | grep -i
-    lucky = !bash -c 'git checkout $(git which $1 -m1)' - 
-    ## These aliases allow you to search for / switch to a branch
-    ## use: git which <branch name>
-    ## use: git lucky <branch name>
+    # example: git which branchname
+
+    lucky = !bash -c 'git checkout $(git which $1 -m1)' -
+    # example: git lucky branchname
+
     ############################################################################
+    # This alias starts up a local git daemon server
+
     serve = daemon \
             --reuseaddr \
             --verbose \
             --base-path=. \
             --export-all ./.git
-    ## This alias starts up a local git daemon server
+
     ############################################################################
+    # open the git repo location in your web browser
+
     open = "!f() { REPO_URL=$(git config remote.origin.url); explorer ${REPO_URL%%.git}; }; f"
     browse = !git open
-    ## open the git repo location in your web browser
+
     ############################################################################
+    # These aliases show pretty logs (source: Git Aliases Of The Gods)
+
     lg1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
     lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
     lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
@@ -61,14 +76,26 @@
     lg2 = !"git lg2-specific --all"
     lg3 = !"git lg3-specific --all"
     lg = !"git lg1"
-    ## These aliases show pretty logs (source: Git Aliases Of The Gods)
+
     ############################################################################
+    # These are old aliases I used when I was new to git (easy to remember)
+
     unadd = reset HEAD~1
+    # example: git unadd dirname/filename.sh
+
     uncommit = reset --soft HEAD~1
+    # example: git uncommit
+
     branches = branch -a
+    # example: git branches
+
     tags = tag -n1 --list
+    # example: git tags
+
     stashes = stash list
+    # example: git stashes
+
     pushb = push --set-upstream origin
-    ## These are old aliases I used all the time when I was new to git
-    ##  and are just easy for me to remember
+    # example: git pushb feature/mybranchname
+
     ############################################################################
