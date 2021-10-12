@@ -14,11 +14,7 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": true,
-    "java.home":"${env:JAVA_HOME}",
-    "python.languageServer": "Microsoft",
-    "python.pythonPath": "${env:python3}",
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "terminal.integrated.scrollback": 100000,
     "update.mode": "none",
     "window.zoomLevel": 0,
@@ -26,6 +22,11 @@
     "workbench.colorTheme": "Default Dark+",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.sideBar.location": "left",
+    "[shellscript]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": false
+    },
     "[c]": {
         "editor.rulers": [ { "column": 79, "color": "#A00000" } ]
     },
@@ -40,7 +41,9 @@
         "editor.detectIndentation": true
     },
     "[makefile]": {
-        "editor.insertSpaces": false
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": false
     },
     "[python]": {
         "editor.rulers": [
