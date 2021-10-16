@@ -12,6 +12,8 @@ command -v dos2unix >/dev/null 2>&1 || {
     exit 1;
 }
 
+# TODO: make install.sh files and separate apart this ball of mud
+
 # copy bash config files
 cp -u ./config/bash/.bash_aliases ~/
 dos2unix ~/.bash_aliases
@@ -34,8 +36,13 @@ cp -u ./config/gnome-terminal/org.gnome.Terminal.desktop ~/.local/share/applicat
 dos2unix ~/.local/share/applications/org.gnome.Terminal.desktop
 chmod 664 ~/.local/share/applications/org.gnome.Terminal.desktop
 
+# copy mpv input config file to it's flatpak config directory
+mkdir -p ~/.var/app/io.mpv.Mpv/config/mpv
+cp -u ./config/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/
+chmod 664 ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
+
 # make nvim directory if it doesn't exist
-[ -d ~/.config/nvim ] || mkdir ~/.config/nvim
+mkdir -p ~/.config/nvim
 
 # copy nvim config files
 cp -ur ./config/nvim/general ~/.config/nvim/
