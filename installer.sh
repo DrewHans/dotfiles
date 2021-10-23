@@ -50,6 +50,11 @@ cp -u ./config/nvim/init.vim ~/.config/nvim/
 find ~/.config/nvim -type f -print0 | xargs -0 dos2unix --
 find ~/.config/nvim -type f -print0 | xargs -0 chmod 664 --
 
+# copy pulseeffects profile config file to it's flatpak config directory
+mkdir -p ~/.var/app/com.github.wwmm.pulseeffects/config/PulseEffects/output
+cp -u ./config/pulseeffects/nyancat.json ~/.var/app/com.github.wwmm.pulseeffects/config/PulseEffects/output/
+chmod 664 ~/.var/app/com.github.wwmm.pulseeffects/config/PulseEffects/output/nyancat.json
+
 # copy vim config files
 cp -u ./config/vim/.vimrc ~/
 dos2unix ~/.vimrc
