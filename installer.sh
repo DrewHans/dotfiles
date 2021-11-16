@@ -62,6 +62,8 @@ chmod 664 ~/.vimrc
 
 # check if vscode is installed
 command -v code >/dev/null 2>&1 && {
+    mkdir -p ~/.config/Code/User/
+
     # copy vscode keybindings config
     cp ./config/vscode/keybindings.json ~/.config/Code/User/
     dos2unix ~/.config/Code/User/keybindings.json
@@ -75,6 +77,8 @@ command -v code >/dev/null 2>&1 && {
 
 # check if azuredatastudio is installed
 command -v azuredatastudio >/dev/null 2>&1 && {
+    mkdir -p ~/.config/azuredatastudio/User/
+
     # copy azuredatastudio keybindings config
     cp ./config/azuredatastudio/keybindings.json ~/.config/azuredatastudio/User/
     dos2unix ~/.config/azuredatastudio/User/keybindings.json
