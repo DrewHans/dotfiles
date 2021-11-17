@@ -50,5 +50,7 @@
             { "column": 72, "color": "#008000" },
             { "column": 79, "color": "#A00000" }
         ]
-    }
+    },
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.enabled": false
 }
