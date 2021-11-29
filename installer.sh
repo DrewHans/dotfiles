@@ -36,6 +36,13 @@ cp -u ./config/gnome-terminal/org.gnome.Terminal.desktop ~/.local/share/applicat
 dos2unix ~/.local/share/applications/org.gnome.Terminal.desktop
 chmod 664 ~/.local/share/applications/org.gnome.Terminal.desktop
 
+# copy totem thumbnailer file
+#sudo mkdir -p /usr/share/thumbnailers/
+#sudo mv /usr/share/thumbnailers/totem.thumbnailer /usr/share/thumbnailers/totem.thumbnailer.backup
+#sudo cp -u ./config/thumbnailer/totem.thumbnailer /usr/share/thumbnailers/
+#sudo dos2unix /usr/share/thumbnailers/totem.thumbnailer
+#sudo chmod 644 /usr/share/thumbnailers/totem.thumbnailer
+
 # copy mpv input config file to it's flatpak config directory
 mkdir -p ~/.var/app/io.mpv.Mpv/config/mpv
 cp -u ./config/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/
