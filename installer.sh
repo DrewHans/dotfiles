@@ -19,10 +19,6 @@ cp -u ./config/bash/.bash_aliases ~/
 dos2unix ~/.bash_aliases
 chmod 664 ~/.bash_aliases
 
-cp -u ./config/bash/.bash_custom ~/
-dos2unix ~/.bash_custom
-chmod 664 ~/.bash_custom
-
 dos2unix ./config/bash/append_to_bashrc.txt
 cat ./config/bash/append_to_bashrc.txt >> ~/.bashrc
 
@@ -30,11 +26,6 @@ cat ./config/bash/append_to_bashrc.txt >> ~/.bashrc
 cp -u ./config/git/.gitconfig ~/
 dos2unix ~/.gitconfig
 chmod 664 ~/.gitconfig
-
-# copy gnome-terminal config files
-cp -u ./config/gnome-terminal/org.gnome.Terminal.desktop ~/.local/share/applications/
-dos2unix ~/.local/share/applications/org.gnome.Terminal.desktop
-chmod 664 ~/.local/share/applications/org.gnome.Terminal.desktop
 
 # copy totem thumbnailer file
 #sudo mkdir -p /usr/share/thumbnailers/
@@ -46,6 +37,7 @@ chmod 664 ~/.local/share/applications/org.gnome.Terminal.desktop
 # copy mpv input config file to it's flatpak config directory
 mkdir -p ~/.var/app/io.mpv.Mpv/config/mpv
 cp -u ./config/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/
+dos2unix ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
 chmod 664 ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
 
 # make nvim directory if it doesn't exist
@@ -57,10 +49,26 @@ cp -u ./config/nvim/init.vim ~/.config/nvim/
 find ~/.config/nvim -type f -print0 | xargs -0 dos2unix --
 find ~/.config/nvim -type f -print0 | xargs -0 chmod 664 --
 
-# copy pulseeffects profile config file to it's flatpak config directory
-mkdir -p ~/.var/app/com.github.wwmm.pulseeffects/config/PulseEffects/output
-cp -u ./config/pulseeffects/nyancat.json ~/.var/app/com.github.wwmm.pulseeffects/config/PulseEffects/output/
-chmod 664 ~/.var/app/com.github.wwmm.pulseeffects/config/PulseEffects/output/nyancat.json
+# copy easyeffects profile config file to it's flatpak config directory
+mkdir -p ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output
+cp -u ./config/easyeffects/nyancat_easyeffects.json ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/
+dos2unix ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/nyancat_easyeffects.json
+chmod 664 ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/nyancat_easyeffects.json
+
+# copy qbittorrent config files
+mkdir -p ~/nyancat/.config/qBittorrent/
+cp -u ./config/qbittorrent/qBittorrent.conf ~/nyancat/.config/qBittorrent/
+dos2unix ~/nyancat/.config/qBittorrent/qBittorrent.conf
+chmod 664 ~/nyancat/.config/qBittorrent/qBittorrent.conf
+
+cp -u ./config/qbittorrent/darkstylesheet.qbtheme ~/nyancat/.config/qBittorrent/
+# note: binary file darkstylesheet.qbtheme does not need dos2unix conversion
+chmod 664 ~/nyancat/.config/qBittorrent/darkstylesheet.qbtheme
+
+unzip ./config/qbittorrent/ipfilter_v0153.zip -d ./config/qbittorrent/
+cp -u ./config/qbittorrent/ipfilter.dat ~/nyancat/.config/qBittorrent/
+dos2unix ~/nyancat/.config/qBittorrent/ipfilter.dat
+chmod 664 ~/nyancat/.config/qBittorrent/ipfilter.dat
 
 # copy vim config files
 cp -u ./config/vim/.vimrc ~/

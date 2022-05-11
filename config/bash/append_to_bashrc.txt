@@ -1,11 +1,20 @@
 
-# include alias definitions
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
-# include custom `.bashrc` code
-if [ -f ~/.bash_custom ]; then
-    . ~/.bash_custom
-fi
+# Add color to man pages
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+
+# Add a new line at the end of the command prompt, improves prompt readability when several directories deep
+PS1=${PS1%?}
+PS1=${PS1%?}\n'$ '
+
+
+# Add local bin to path
+export PATH=$PATH:/home/nyancat/.local/bin
 
