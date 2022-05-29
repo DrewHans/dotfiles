@@ -281,24 +281,16 @@
             },
             "split-channels": false
         },
-        "loudness": {
-            "fft": "16384",
-            "input-gain": 0.0,
-            "output-gain": 0.0,
-            "std": "ISO226-2003",
-            "volume": 0.0
-        },
         "maximizer": {
             "ceiling": 0.0,
             "input-gain": 0.0,
             "output-gain": 0.0,
-            "release": 25.0,
+            "release": 2.0,
             "threshold": 0.0
         },
         "plugins_order": [
             "crystalizer",
             "equalizer",
-            "loudness",
             "maximizer"
         ]
     }
