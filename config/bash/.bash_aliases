@@ -18,3 +18,6 @@ alias keepassxc="flatpak run org.keepassxc.KeePassXC"
 alias LibreOffice="flatpak run org.libreoffice.LibreOffice"
 alias qbittorrent="flatpak run org.qbittorrent.qBittorrent"
 alias vlc="flatpak run org.videolan.VLC"
+
+alias installupdates="sudo /home/nyancat/bin/update.sh"
+
