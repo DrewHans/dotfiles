@@ -35,7 +35,6 @@
     up = !git pull --rebase --prune $@ && \
           git submodule update --init --recursive
 
-
     ############################################################################
     # These aliases allow you to create & undo a temporary commit savepoint
 
@@ -47,9 +46,6 @@
 
     which = !git branch | grep -i
     # example: git which branchname
-
-    lucky = !bash -c 'git checkout $(git which $1 -m1)' -
-    # example: git lucky branchname
 
     ############################################################################
     # This alias starts up a local git daemon server
@@ -80,20 +76,8 @@
     ############################################################################
     # These are old aliases I used when I was new to git (easy to remember)
 
-    unadd = reset HEAD~1
-    # example: git unadd dirname/filename.sh
-
-    uncommit = reset --soft HEAD~1
-    # example: git uncommit
-
     branches = branch -a
     # example: git branches
-
-    tags = tag -n1 --list
-    # example: git tags
-
-    stashes = stash list
-    # example: git stashes
 
     pushb = push --set-upstream origin
     # example: git pushb feature/mybranchname
