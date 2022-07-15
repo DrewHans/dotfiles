@@ -1,13 +1,14 @@
 alias browser="brave-browser"
 alias vpn="nordvpn"
-alias vpnc="vpn set killswitch off && vpn c && vpn set killswitch on"
-alias vpnst="vpn status"
+alias vpnc="/home/nyancat/bin/nordvpn-start.sh"
+alias vpnd="/home/nyancat/bin/nordvpn-stop.sh"
+alias vpnst="/home/nyancat/bin/nordvpn-status.sh"
 alias dlaudio="yt-dlp -i -x --audio-format mp3 -o '%(title)s.%(ext)s'"
 
 # openvpn aliases
-#alias startvpn="sudo /home/nyancat/bin/vpnstart.sh"
-#alias stopvpn="sudo /home/nyancat/bin/vpnstop.sh"
-#alias vpnstatus="/home/nyancat/bin/vpnstatus.sh"
+#alias vpnc="sudo /home/nyancat/bin/openvpn-start.sh"
+#alias vpnd="sudo /home/nyancat/bin/openvpn-stop.sh"
+#alias vpnst="/home/nyancat/bin/nordvpn-status.sh"
 
 # alias flatpak apps
 # use `flatpak list --user` to find full application ids
@@ -30,4 +31,4 @@ alias qbittorrent="flatpak run org.qbittorrent.qBittorrent"
 alias vlc="flatpak run org.videolan.VLC"
 alias zoom="flatpak run us.zoom.Zoom"
 
-alias installupdates="sudo /home/nyancat/bin/update.sh"
+alias up="sudo /home/nyancat/bin/update.sh"
