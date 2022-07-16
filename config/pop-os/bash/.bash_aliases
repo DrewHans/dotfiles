@@ -1,8 +1,11 @@
 alias browser="brave-browser"
+
 alias vpn="nordvpn"
 alias vpnc="/home/nyancat/bin/nordvpn-start.sh"
 alias vpnd="/home/nyancat/bin/nordvpn-stop.sh"
 alias vpnst="/home/nyancat/bin/nordvpn-status.sh"
+alias vpnfix="sudo /home/nyancat/bin/nordvpn-repair.sh"
+
 alias dlaudio="yt-dlp -i -x --audio-format mp3 -o '%(title)s.%(ext)s'"
 
 # openvpn aliases
@@ -32,3 +35,4 @@ alias vlc="flatpak run org.videolan.VLC"
 alias zoom="flatpak run us.zoom.Zoom"
 
 alias up="sudo /home/nyancat/bin/update.sh"
+
