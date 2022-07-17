@@ -42,8 +42,11 @@ chmod 644 ~/.gitconfig
 # copy mpv input config file to it's flatpak config directory
 mkdir -p ~/.var/app/io.mpv.Mpv/config/mpv
 cp -u ./config/pop-os/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/
+cp -u ./config/pop-os/mpv/mpv.conf ~/.var/app/io.mpv.Mpv/config/mpv/
 dos2unix ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
+dos2unix ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 chmod 644 ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
+chmod 644 ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 
 # make nvim directory if it doesn't exist
 mkdir -p ~/.config/nvim
