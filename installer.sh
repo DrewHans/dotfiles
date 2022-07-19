@@ -114,7 +114,7 @@ command -v azuredatastudio >/dev/null 2>&1 && {
 }
 
 # add new document creation option to right click context menu
-touch ~/Templates/"New Document"
+touch ~/Templates/"New Document.txt"
 
 echo "dotfiles installed"
 
