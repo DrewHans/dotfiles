@@ -113,6 +113,9 @@ command -v azuredatastudio >/dev/null 2>&1 && {
     chmod 644 ~/.config/azuredatastudio/User/settings.json
 }
 
+# add new document creation option to right click context menu
+touch ~/Templates/"New Document"
+
 echo "dotfiles installed"
 
 exit
