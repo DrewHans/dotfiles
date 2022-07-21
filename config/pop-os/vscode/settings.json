@@ -17,7 +17,7 @@
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.scrollback": 100000,
     "update.mode": "none",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "workbench.colorCustomizations": { "editorRuler.foreground": "#B4003C" },
     "workbench.colorTheme": "Default Dark+",
     "workbench.iconTheme": "material-icon-theme",
