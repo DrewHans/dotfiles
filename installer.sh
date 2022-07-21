@@ -50,17 +50,14 @@ mkdir -p ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output
 cp -u ./config/pop-os/easyeffects/nyancat_easyeffects.json ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/
 chmod 644 ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/nyancat_easyeffects.json
 
-# copy qbittorrent config files
-mkdir -p ~/nyancat/.config/qBittorrent/
-cp -u ./config/pop-os/qbittorrent/qBittorrent.conf ~/nyancat/.config/qBittorrent/
-chmod 644 ~/nyancat/.config/qBittorrent/qBittorrent.conf
-
-cp -u ./config/pop-os/qbittorrent/darkstylesheet.qbtheme ~/nyancat/.config/qBittorrent/
-chmod 644 ~/nyancat/.config/qBittorrent/darkstylesheet.qbtheme
+# copy qbittorrent config files to it's flatpak config directory
+mkdir -p ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/
+cp -u ./config/pop-os/qbittorrent/qBittorrent.conf ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/
+chmod 644 ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/qBittorrent.conf
 
 unzip ./config/pop-os/qbittorrent/ipfilter_v0153.zip -d ./config/pop-os/qbittorrent/
-cp -u ./config/pop-os/qbittorrent/ipfilter.dat ~/nyancat/.config/qBittorrent/
-chmod 644 ~/nyancat/.config/qBittorrent/ipfilter.dat
+cp -u ./config/pop-os/qbittorrent/ipfilter.dat ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/
+chmod 644 ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/ipfilter.dat
 
 # copy vim config files
 cp -u ./config/pop-os/vim/.vimrc ~/

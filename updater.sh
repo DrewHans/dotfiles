@@ -28,7 +28,7 @@ cp -u ~/.config/nvim/init.vim ./config/pop-os/nvim/
 cp -u ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/nyancat_easyeffects.json ./config/pop-os/easyeffects/
 
 # update repo's qbittorrent config files
-cp -u ~/nyancat/.config/qBittorrent/qBittorrent.conf ./config/pop-os/qbittorrent/
+cp -u ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/qBittorrent.conf ./config/pop-os/qbittorrent/
 
 # update repo's vim config files
 cp -u ~/.vimrc ./config/pop-os/vim/
