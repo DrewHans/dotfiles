@@ -7,6 +7,8 @@ if [[ $(/usr/bin/id -u) -eq 0 ]]; then
     exit
 fi
 
+echo "Updating dotfiles repo"
+
 # update repo's bash aliases
 cp -u ~/.bash_aliases ./config/pop-os/bash/
 

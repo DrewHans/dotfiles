@@ -7,6 +7,8 @@ if [[ $(/usr/bin/id -u) -eq 0 ]]; then
     exit
 fi
 
+echo "Installing dotfiles"
+
 # TODO: make install.sh files and separate apart this ball of mud
 
 # copy bash aliases
