@@ -91,8 +91,16 @@ command -v azuredatastudio >/dev/null 2>&1 && {
     chmod 644 ~/.config/azuredatastudio/User/settings.json
 }
 
-# add new document creation option to right click context menu
-touch ~/Templates/"New Document.txt"
+# add new document creation options to right click context menu
+touch ~/Templates/json.json
+touch ~/Templates/markdown.md
+touch ~/Templates/opendoc_graphic.odg
+touch ~/Templates/opendoc_presentation.odp
+touch ~/Templates/opendoc_spreadsheet.ods
+touch ~/Templates/opendoc_text.odt
+touch ~/Templates/script.sh
+echo -e '#!'"/usr/bin/env bash\n\n\n# CODE GOES HERE\n" > ~/Templates/script.sh
+touch ~/Templates/text.txt
 
 echo "dotfiles installed"
 
