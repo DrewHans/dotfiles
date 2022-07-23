@@ -1,21 +1,7 @@
 alias batst="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
-
 alias browser="brave-browser"
-
 alias dlaudio="yt-dlp -i -x --audio-format mp3 -o '%(title)s.%(ext)s'"
-
 alias up="sudo /home/nyancat/bin/update.sh"
-
-alias vpn="nordvpn"
-alias vpnc="/home/nyancat/bin/nordvpn-start.sh"
-alias vpnd="/home/nyancat/bin/nordvpn-stop.sh"
-alias vpnst="/home/nyancat/bin/nordvpn-status.sh"
-alias vpnfix="sudo /home/nyancat/bin/nordvpn-repair.sh"
-
-# openvpn aliases
-#alias vpnc="sudo /home/nyancat/bin/openvpn-start.sh"
-#alias vpnd="sudo /home/nyancat/bin/openvpn-stop.sh"
-#alias vpnst="/home/nyancat/bin/nordvpn-status.sh"
 
 # alias flatpak apps
 # use `flatpak list --user` to find full application ids
