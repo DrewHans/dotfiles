@@ -20,7 +20,6 @@
     "window.zoomLevel": 1,
     "workbench.colorCustomizations": { "editorRuler.foreground": "#B4003C" },
     "workbench.colorTheme": "Default Dark+",
-    "workbench.iconTheme": "material-icon-theme",
     "workbench.sideBar.location": "left",
     "[shellscript]": {
         "editor.tabSize": 4,

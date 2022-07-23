@@ -176,7 +176,7 @@
                     "type": "Bell"
                 }
             },
-            "mode": "IIR",
+            "mode": "FIR",
             "num-bands": 10,
             "output-gain": 0.0,
             "right": {
