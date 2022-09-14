@@ -3,8 +3,8 @@
 
 # exit if running as root
 if [[ $(/usr/bin/id -u) -eq 0 ]]; then
-    echo "Do not run this script as root"
-    exit
+	echo "Do not run this script as root"
+	exit
 fi
 
 echo "Installing dotfiles"
@@ -62,9 +62,12 @@ mkdir -p ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/
 cp -u ./config/pop-os/qbittorrent/qBittorrent.conf ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/
 chmod 644 ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/qBittorrent.conf
 
-unzip ./config/pop-os/qbittorrent/ipfilter_v0153.zip -d ./config/pop-os/qbittorrent/
-cp -u ./config/pop-os/qbittorrent/ipfilter.dat ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/
-chmod 644 ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/ipfilter.dat
+# if ipfilter.dat does not exist, add it
+if [ ! -f "~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/ipfilter.dat" ]; then
+	unzip ./config/pop-os/qbittorrent/ipfilter_v0153.zip -d ./config/pop-os/qbittorrent/
+	cp -u ./config/pop-os/qbittorrent/ipfilter.dat ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/
+	chmod 644 ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/ipfilter.dat
+fi
 
 # copy vim config files
 cp -u ./config/pop-os/vim/.vimrc ~/
@@ -72,28 +75,28 @@ chmod 644 ~/.vimrc
 
 # check if vscode is installed
 command -v code >/dev/null 2>&1 && {
-    mkdir -p ~/.config/Code/User/
+	mkdir -p ~/.config/Code/User/
 
-    # copy vscode keybindings config
-    cp ./config/pop-os/vscode/keybindings.json ~/.config/Code/User/
-    chmod 644 ~/.config/Code/User/keybindings.json
+	# copy vscode keybindings config
+	cp ./config/pop-os/vscode/keybindings.json ~/.config/Code/User/
+	chmod 644 ~/.config/Code/User/keybindings.json
 
-    # copy vscode settings config
-    cp ./config/pop-os/vscode/settings.json ~/.config/Code/User/
-    chmod 644 ~/.config/Code/User/settings.json
+	# copy vscode settings config
+	cp ./config/pop-os/vscode/settings.json ~/.config/Code/User/
+	chmod 644 ~/.config/Code/User/settings.json
 }
 
 # check if azuredatastudio is installed
 command -v azuredatastudio >/dev/null 2>&1 && {
-    mkdir -p ~/.config/azuredatastudio/User/
+	mkdir -p ~/.config/azuredatastudio/User/
 
-    # copy azuredatastudio keybindings config
-    cp ./config/pop-os/azuredatastudio/keybindings.json ~/.config/azuredatastudio/User/
-    chmod 644 ~/.config/azuredatastudio/User/keybindings.json
+	# copy azuredatastudio keybindings config
+	cp ./config/pop-os/azuredatastudio/keybindings.json ~/.config/azuredatastudio/User/
+	chmod 644 ~/.config/azuredatastudio/User/keybindings.json
 
-    # copy azuredatastudio settings config
-    cp ./config/pop-os/azuredatastudio/settings.json ~/.config/azuredatastudio/User/
-    chmod 644 ~/.config/azuredatastudio/User/settings.json
+	# copy azuredatastudio settings config
+	cp ./config/pop-os/azuredatastudio/settings.json ~/.config/azuredatastudio/User/
+	chmod 644 ~/.config/azuredatastudio/User/settings.json
 }
 
 # add new document creation options to right click context menu
