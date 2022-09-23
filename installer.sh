@@ -52,10 +52,10 @@ mkdir -p ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output
 cp -u ./config/pop-os/easyeffects/nyancat_easyeffects.json ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/
 chmod 644 ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/nyancat_easyeffects.json
 
-# copy obs config files to it's flatpak config directory
-mkdir -p ~/.var/app/com.obsproject.Studio/config/obs-studio
-chmod 755 ~/.var/app/com.obsproject.Studio/config/obs-studio/
-cp -Ru ./config/pop-os/obs/obs-studio/. ~/.var/app/com.obsproject.Studio/config/obs-studio/
+# copy obs config files to it's config directory
+mkdir -p ~/.config/obs-studio
+chmod 755 ~/.config/obs-studio/
+cp -Ru ./config/pop-os/obs/obs-studio/. ~/.config/obs-studio/
 
 # copy qbittorrent config files to it's flatpak config directory
 mkdir -p ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/
