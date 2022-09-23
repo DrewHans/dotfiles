@@ -30,8 +30,8 @@ cp -u ~/.config/nvim/init.vim ./config/pop-os/nvim/
 cp -u ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/nyancat_easyeffects.json ./config/pop-os/easyeffects/
 
 # update repo's obs config files
-cp -u ~/.var/app/com.obsproject.Studio/config/obs-studio/global.ini ./config/pop-os/obs/obs-studio/
-cp -Ru ~/.var/app/com.obsproject.Studio/config/obs-studio/basic ./config/pop-os/obs/obs-studio/
+cp -u ~/.config/obs-studio/global.ini ./config/pop-os/obs/obs-studio/
+cp -Ru ~/.config/obs-studio/basic ./config/pop-os/obs/obs-studio/
 rm ./config/pop-os/obs/obs-studio/basic/scenes/*.bak
 
 # update repo's qbittorrent config files
