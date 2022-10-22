@@ -130,3 +130,6 @@ export PATH=$PATH:/home/nyancat/.local/bin
 # Add Android SDK environment variable
 ANDROID_SDK_ROOT=/home/nyancat/Android/Sdk
 ANDROID_HOME=/home/nyancat/Android/Sdk
+
+# Add Android platform-tools to path
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
