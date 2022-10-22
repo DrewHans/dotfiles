@@ -168,5 +168,6 @@ fi
 
 # Add gradle to path
 if [ -d /opt/gradle/gradle-7.5.1/bin ]; then
-    export PATH=$PATH:/opt/gradle/gradle-7.5.1/bin
+    export PATH=${PATH}:/opt/gradle/gradle-7.5.1/bin
 fi
+
