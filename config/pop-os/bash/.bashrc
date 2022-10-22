@@ -124,20 +124,46 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 PS1=${PS1%?}
 PS1=${PS1%?}\n'$ '
 
-# Add local bin to path
-if [ -d /home/nyancat/.local/bin ]; then
-    export PATH=$PATH:/home/nyancat/.local/bin
+# Add Java environment variable
+if [ -d /usr/lib/jvm/java-11-openjdk-amd64 ]; then
+    export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 fi
 
-# Add Android SDK environment variable
+# Add local bin to path
+if [ -d /home/nyancat/.local/bin ]; then
+    export PATH=${PATH}:/home/nyancat/.local/bin
+fi
+
+#### Android Related
+# Add Android environment variables
 if [ -d /home/nyancat/Android/Sdk ]; then
     export ANDROID_SDK_ROOT=/home/nyancat/Android/Sdk
     export ANDROID_HOME=/home/nyancat/Android/Sdk
 fi
 
+# Add Android build-tools to path
+if [ -d $ANDROID_HOME/build-tools ]; then
+    export PATH=${PATH}:$ANDROID_HOME/build-tools
+fi
+
+# Add Android cmdline-tools to path
+if [ -d $ANDROID_HOME/cmdline-tools/latest/bin ]; then
+    export PATH=${PATH}:$ANDROID_HOME/cmdline-tools/latest/bin
+fi
+
+# Add Android emulator to path
+if [ -d $ANDROID_HOME/emulator ]; then
+    export PATH=${PATH}:$ANDROID_HOME/emulator
+fi
+
 # Add Android platform-tools to path
-if [ -d $ANDROID_HOME/tools:$ANDROID_HOME/platform-tools ]; then
-    export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+if [ -d $ANDROID_HOME/platform-tools ]; then
+    export PATH=${PATH}:$ANDROID_HOME/platform-tools
+fi
+
+# Add Android tools to path
+if [ -d $ANDROID_HOME/tools ]; then
+    export PATH=${PATH}:$ANDROID_HOME/tools
 fi
 
 # Add gradle to path
