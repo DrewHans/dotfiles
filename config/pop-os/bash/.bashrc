@@ -125,11 +125,22 @@ PS1=${PS1%?}
 PS1=${PS1%?}\n'$ '
 
 # Add local bin to path
-export PATH=$PATH:/home/nyancat/.local/bin
+if [ -d /home/nyancat/.local/bin ]; then
+    export PATH=$PATH:/home/nyancat/.local/bin
+fi
 
 # Add Android SDK environment variable
-ANDROID_SDK_ROOT=/home/nyancat/Android/Sdk
-ANDROID_HOME=/home/nyancat/Android/Sdk
+if [ -d /home/nyancat/Android/Sdk ]; then
+    export ANDROID_SDK_ROOT=/home/nyancat/Android/Sdk
+    export ANDROID_HOME=/home/nyancat/Android/Sdk
+fi
 
 # Add Android platform-tools to path
-export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+if [ -d $ANDROID_HOME/tools:$ANDROID_HOME/platform-tools ]; then
+    export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+fi
+
+# Add gradle to path
+if [ -d /opt/gradle/gradle-7.5.1/bin ]; then
+    export PATH=$PATH:/opt/gradle/gradle-7.5.1/bin
+fi
