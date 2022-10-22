@@ -1,6 +1,24 @@
 {
     "output": {
+        "bass_enhancer": {
+            "amount": 0.0,
+            "blend": 0.0,
+            "bypass": false,
+            "floor": 20.0,
+            "floor-active": false,
+            "harmonics": 8.5,
+            "input-gain": 0.0,
+            "output-gain": 0.0,
+            "scope": 100.0
+        },
         "blocklist": [],
+        "crossfeed": {
+            "bypass": false,
+            "fcut": 700,
+            "feed": 4.5,
+            "input-gain": 0.0,
+            "output-gain": 0.0
+        },
         "crystalizer": {
             "band0": {
                 "bypass": false,
@@ -68,12 +86,13 @@
                 "mute": false
             },
             "bypass": false,
-            "input-gain": 1.0,
+            "input-gain": 0.0,
             "output-gain": 0.0
         },
         "equalizer": {
+            "balance": 0.0,
             "bypass": false,
-            "input-gain": 2.0,
+            "input-gain": 0.0,
             "left": {
                 "band0": {
                     "frequency": 29.952623149688797,
@@ -176,9 +195,11 @@
                     "type": "Bell"
                 }
             },
-            "mode": "FIR",
+            "mode": "FFT",
             "num-bands": 10,
             "output-gain": 0.0,
+            "pitch-left": 0.0,
+            "pitch-right": 0.0,
             "right": {
                 "band0": {
                     "frequency": 29.952623149688797,
@@ -294,6 +315,8 @@
         "plugins_order": [
             "crystalizer",
             "equalizer",
+            "bass_enhancer",
+            "crossfeed",
             "maximizer"
         ]
     }
