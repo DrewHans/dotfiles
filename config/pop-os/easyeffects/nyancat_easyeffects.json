@@ -87,7 +87,7 @@
             },
             "bypass": false,
             "input-gain": 0.0,
-            "output-gain": 0.0
+            "output-gain": -2.0
         },
         "equalizer": {
             "balance": 0.0,
