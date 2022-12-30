@@ -125,8 +125,9 @@ PS1=${PS1%?}
 PS1=${PS1%?}\n'$ '
 
 # Add Java environment variable
-if [ -d /usr/lib/jvm/java-11-openjdk-amd64 ]; then
-    export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+if [ -d /usr/lib/jvm/java-17-openjdk-amd64 ]; then
+    export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+    export PATH=${PATH}:$JAVA_HOME/bin
 fi
 
 # Add local bin to path
@@ -170,4 +171,3 @@ fi
 if [ -d /opt/gradle/gradle-7.5.1/bin ]; then
     export PATH=${PATH}:/opt/gradle/gradle-7.5.1/bin
 fi
-

@@ -29,10 +29,22 @@
     "[c]": {
         "editor.rulers": [ { "column": 79, "color": "#A00000" } ]
     },
+    "[css]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+    },
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.defaultFormatter": "vscode.html-language-features",
+    },
     "[javascript]": {
         "editor.tabSize": 2,
         "editor.insertSpaces": true,
-        "editor.detectIndentation": true
+        "editor.detectIndentation": false,
+        "editor.defaultFormatter": "vscode.typescript-language-features",
     },
     "[json]": {
         "editor.tabSize": 2,
@@ -51,5 +63,5 @@
         ]
     },
     "security.workspace.trust.banner": "never",
-    "security.workspace.trust.enabled": false
+    "security.workspace.trust.enabled": false,
 }
