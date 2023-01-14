@@ -27,6 +27,9 @@ cp -u ~/.bashrc ~/.bashrc_backup
 cp -u ./config/bash/.bashrc ~/
 chmod 644 ~/.bashrc
 
+# install user fonts
+unzip ./config/fonts/fonts.zip -d ~/.fonts
+
 # copy git config files
 cp -u ./config/git/.gitconfig ~/
 chmod 644 ~/.gitconfig
