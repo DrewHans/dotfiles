@@ -28,7 +28,7 @@ cp -u ./config/bash/.bashrc ~/
 chmod 644 ~/.bashrc
 
 # install user fonts
-unzip ./config/fonts/fonts.zip -d ~/.fonts
+unzip ./config/fonts/fonts.zip -d ~/
 
 # copy git config files
 cp -u ./config/git/.gitconfig ~/
