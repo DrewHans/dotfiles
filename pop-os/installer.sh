@@ -107,6 +107,19 @@ command -v azuredatastudio >/dev/null 2>&1 && {
 	chmod 644 ~/.config/azuredatastudio/User/settings.json
 }
 
+# check if vscodium is installed
+command -v codium >/dev/null 2>&1 && {
+	mkdir -p ~/.config/VSCodium/User/
+
+	# copy vscode keybindings config
+	cp ./config/vscodium/keybindings.json ~/.config/VSCodium/User/
+	chmod 644 ~/.config/VSCodium/User/keybindings.json
+
+	# copy vscode settings config
+	cp ./config/vscodium/settings.json ~/.config/VSCodium/User/
+	chmod 644 ~/.config/VSCodium/User/settings.json
+}
+
 # add new document creation options to right click context menu
 touch ~/Templates/json.json
 touch ~/Templates/markdown.md
