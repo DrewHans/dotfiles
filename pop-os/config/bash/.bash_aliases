@@ -6,6 +6,7 @@ alias batst='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias browser='brave-browser'
 alias cdr='cd $(git rev-parse --show-toplevel)'
 alias dlaudio='yt-dlp -i -x --audio-format mp3 -o "%(title)s.%(ext)s"'
+alias nuke='/home/nyancat/bin/nuke.sh'
 alias up='sudo /home/nyancat/bin/update.sh'
 
 # alias flatpak apps
