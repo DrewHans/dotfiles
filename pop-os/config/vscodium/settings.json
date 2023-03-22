@@ -56,6 +56,9 @@
         "editor.insertSpaces": true,
         "editor.detectIndentation": true
     },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "[makefile]": {
         "editor.tabSize": 4,
         "editor.insertSpaces": false,
