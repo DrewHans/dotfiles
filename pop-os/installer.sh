@@ -28,7 +28,7 @@ cp -u ./config/bash/.bashrc ~/
 chmod 644 ~/.bashrc
 
 # install user fonts
-unzip ./config/fonts/fonts.zip -d ~/
+unzip -u ./config/fonts/fonts.zip -d ~/ >/dev/null 2>&1
 
 # copy git config files
 cp -u ./config/git/.gitconfig ~/
@@ -71,7 +71,8 @@ cp -u ./config/qbittorrent/qBittorrent.conf ~/.var/app/org.qbittorrent.qBittorre
 chmod 644 ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/qBittorrent.conf
 
 # if ipfilter.dat does not exist, add it
-if [ ! -f "~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/ipfilter.dat" ]; then
+if [ ! -f ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/ipfilter.dat ]
+then
 	unzip ./config/qbittorrent/ipfilter_v0153.zip -d ./config/qbittorrent/
 	cp -u ./config/qbittorrent/ipfilter.dat ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/
 	chmod 644 ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/ipfilter.dat
