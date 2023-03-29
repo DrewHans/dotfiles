@@ -34,6 +34,11 @@ unzip -u ./config/fonts/fonts.zip -d ~/ >/dev/null 2>&1
 cp -u ./config/git/.gitconfig ~/
 chmod 644 ~/.gitconfig
 
+# copy htop config file
+mkdir -p ~/.config/htop
+cp -u ./config/htop/htoprc ~/.config/htop/
+chmod 644 ~/.config/htop/htoprc
+
 # copy totem thumbnailer file
 #sudo mkdir -p /usr/share/thumbnailers/
 #sudo mv /usr/share/thumbnailers/totem.thumbnailer /usr/share/thumbnailers/totem.thumbnailer.backup
