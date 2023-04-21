@@ -21,6 +21,9 @@ cp -u ~/.gitconfig ./config/git/
 # update repo's htop config file
 cp -u ~/.config/htop/htoprc ./config/htop/
 
+# update repo's authenticator config file
+cp -u ~/.var/app/com.belmoussaoui.Authenticator/config/glib-2.0/settings/keyfile ./config/authenticator/
+
 # update repo's mpv input config file
 cp -u ~/.var/app/io.mpv.Mpv/config/mpv/input.conf ./config/mpv/
 cp -u ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf ./config/mpv/

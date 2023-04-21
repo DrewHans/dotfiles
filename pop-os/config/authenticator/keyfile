@@ -1,0 +1,8 @@
+[com/belmoussaoui/Authenticator]
+keyrings-migrated=true
+auto-lock=true
+auto-lock-timeout=1
+window-width=720
+window-height=600
+is-maximized=false
+download-favicons-metered=false

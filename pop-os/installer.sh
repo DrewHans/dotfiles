@@ -45,6 +45,11 @@ chmod 644 ~/.config/htop/htoprc
 #sudo cp -u ./config/thumbnailer/totem.thumbnailer /usr/share/thumbnailers/
 #sudo chmod 644 /usr/share/thumbnailers/totem.thumbnailer
 
+# copy authenticator config file to it's flatpak config directory
+mkdir -p ~/.var/app/com.belmoussaoui.Authenticator/config/glib-2.0/settings
+cp -u ./config/authenticator/keyfile ~/.var/app/com.belmoussaoui.Authenticator/config/glib-2.0/settings/
+chmod 600 ~/.var/app/com.belmoussaoui.Authenticator/config/glib-2.0/settings/keyfile
+
 # copy mpv input config file to it's flatpak config directory
 mkdir -p ~/.var/app/io.mpv.Mpv/config/mpv
 cp -u ./config/mpv/input.conf ~/.var/app/io.mpv.Mpv/config/mpv/
