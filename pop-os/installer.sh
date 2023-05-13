@@ -34,6 +34,12 @@ unzip -u ./config/fonts/fonts.zip -d ~/ >/dev/null 2>&1
 cp -u ./config/git/.gitconfig ~/
 chmod 644 ~/.gitconfig
 
+# copy gtk-3.0 config files
+cp -u ./config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
+chmod 644 ~/.config/gtk-3.0/gtk.css
+cp -u ./config/gtk-3.0/bookmarks ~/.config/gtk-3.0/
+chmod 644 ~/.config/gtk-3.0/bookmarks
+
 # copy htop config file
 mkdir -p ~/.config/htop
 cp -u ./config/htop/htoprc ~/.config/htop/

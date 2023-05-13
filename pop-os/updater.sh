@@ -18,6 +18,10 @@ cp -u ~/.bashrc ./config/bash/
 # update repo's git config files
 cp -u ~/.gitconfig ./config/git/
 
+# update gtk-3.0 config files
+cp -u ~/.config/gtk-3.0/gtk.css ./config/gtk-3.0/
+cp -u ~/.config/gtk-3.0/bookmarks ./config/gtk-3.0/
+
 # update repo's htop config file
 cp -u ~/.config/htop/htoprc ./config/htop/
 
