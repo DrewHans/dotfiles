@@ -55,6 +55,15 @@ command -v code >/dev/null 2>&1 && {
     cp ~/.config/Code/User/settings.json ./config/vscode/
 }
 
+# check if vscodium is installed
+command -v codium >/dev/null 2>&1 && {
+    # update repo's vscodium keybindings config
+    cp ~/.config/VSCodium/User/keybindings.json ./config/vscodium/
+
+    # update repo's vscodium settings config
+    cp ~/.config/VSCodium/User/settings.json ./config/vscodium/
+}
+
 # check if azuredatastudio is installed
 command -v azuredatastudio >/dev/null 2>&1 && {
     # update repo's azuredatastudio keybindings config

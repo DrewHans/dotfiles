@@ -122,11 +122,11 @@ command -v azuredatastudio >/dev/null 2>&1 && {
 command -v codium >/dev/null 2>&1 && {
 	mkdir -p ~/.config/VSCodium/User/
 
-	# copy vscode keybindings config
+	# copy codium keybindings config
 	cp ./config/vscodium/keybindings.json ~/.config/VSCodium/User/
 	chmod 644 ~/.config/VSCodium/User/keybindings.json
 
-	# copy vscode settings config
+	# copy codium settings config
 	cp ./config/vscodium/settings.json ~/.config/VSCodium/User/
 	chmod 644 ~/.config/VSCodium/User/settings.json
 }

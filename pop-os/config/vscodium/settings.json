@@ -54,7 +54,8 @@
     "[json]": {
         "editor.tabSize": 2,
         "editor.insertSpaces": true,
-        "editor.detectIndentation": true
+        "editor.detectIndentation": true,
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -73,4 +74,7 @@
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.enabled": false,
     "editor.lightbulb.enabled": false,
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
 }

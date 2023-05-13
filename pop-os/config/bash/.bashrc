@@ -124,6 +124,15 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 PS1=${PS1%?}
 PS1=${PS1%?}\n'$ '
 
+# Add PhantomJS environment variable & location to PATH
+if [ -d /home/nyancat/.local/share/phantomjs-2.1.1-linux-x86_64 ]; then
+    # OPENSSL_CONF is required to fix 'Auto configuration failed' error
+    export OPENSSL_CONF=/etc/ssl
+
+    export PHANTOM_JS="phantomjs-2.1.1-linux-x86_64"
+    export PATH=${PATH}:/home/nyancat/.local/share/$PHANTOM_JS/bin
+fi
+
 # Add Java environment variable
 if [ -d /usr/lib/jvm/java-17-openjdk-amd64 ]; then
     export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
