@@ -10,7 +10,3 @@ scrollbar, scrollbar button, scrollbar slider {
   /* slider padding */
   border: 2px solid transparent;
 }
-
-entry {
-  border-color: Red;
-}
