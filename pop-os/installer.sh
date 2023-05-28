@@ -67,9 +67,8 @@ chmod 644 ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 mkdir -p ~/.config/nvim
 
 # copy nvim config files
-cp -ur ./config/nvim/general ~/.config/nvim/
-cp -u ./config/nvim/init.vim ~/.config/nvim/
-find ~/.config/nvim -type f -print0 | xargs -0 chmod 644 --
+cp -u ./config/nvim/init.vim ~/.var/app/io.neovim.nvim/config/nvim/
+chmod 644 ~/.var/app/io.neovim.nvim/config/nvim/init.vim
 
 # copy easyeffects profile config file to it's flatpak config directory
 mkdir -p ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output

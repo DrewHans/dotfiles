@@ -33,8 +33,7 @@ cp -u ~/.var/app/io.mpv.Mpv/config/mpv/input.conf ./config/mpv/
 cp -u ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf ./config/mpv/
 
 # update repo's nvim config files
-cp -ur ~/.config/nvim/general ./config/nvim/
-cp -u ~/.config/nvim/init.vim ./config/nvim/
+cp -u ~/.var/app/io.neovim.nvim/config/nvim/init.vim ./config/nvim/
 
 # update repo's easyeffects profile config file
 cp -u ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/nyancat_easyeffects.json ./config/easyeffects/
