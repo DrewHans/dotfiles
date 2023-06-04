@@ -64,7 +64,7 @@ chmod 644 ~/.var/app/io.mpv.Mpv/config/mpv/input.conf
 chmod 644 ~/.var/app/io.mpv.Mpv/config/mpv/mpv.conf
 
 # make nvim directory if it doesn't exist
-mkdir -p ~/.config/nvim
+mkdir -p ~/.var/app/io.neovim.nvim/config/nvim/
 
 # copy nvim config files
 cp -u ./config/nvim/init.vim ~/.var/app/io.neovim.nvim/config/nvim/
