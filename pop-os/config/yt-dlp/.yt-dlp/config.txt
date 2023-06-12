@@ -1,0 +1,7 @@
+--embed-subs
+--write-auto-sub
+--sub-format "best"
+--sub-lang "en"
+
+--merge-output-format "mkv"
+--remux-video "mkv"
