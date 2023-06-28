@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Krita
+Comment=Krita | Digital Painting. Creative Freedom.
+Exec=/home/nyancat/AppImages/krita-5.1.5-x86_64.appimage
+Type=Application
+Terminal=false
+Icon=/home/nyancat/.local/share/icons/krita-logo.png
+NoDisplay=false
