@@ -25,4 +25,9 @@ then
 	# copy gnome application .desktop file
 	cp -u ./krita.desktop ~/.local/share/applications/krita.desktop
 	chmod 644 ~/.local/share/applications/krita.desktop
+
+	# add as default application to local mimeapps.list
+	echo "[Default Applications]" > ~/.local/share/applications/mimeapps.list
+	echo "application/x-krita=krita.desktop;" >> ~/.local/share/applications/mimeapps.list
+	echo "" >> ~/.local/share/applications/mimeapps.list
 fi
