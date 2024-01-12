@@ -72,12 +72,12 @@ chmod 644 ~/.var/app/io.neovim.nvim/config/nvim/init.vim
 
 # copy easyeffects profile config file to it's flatpak config directory
 mkdir -p ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output
-cp -u ./config/easyeffects/nyancat_easyeffects.json ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/
-chmod 644 ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/nyancat_easyeffects.json
+chmod -R 644 ./config/easyeffects
+cp -Ru ./config/easyeffects/. ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/
 
 # copy obs config files to it's config directory
 mkdir -p ~/.config/obs-studio
-chmod 755 ~/.config/obs-studio/
+chmod -R 644 ~/.config/obs-studio/
 cp -Ru ./config/obs/obs-studio/. ~/.config/obs-studio/
 
 # copy qbittorrent config files to it's flatpak config directory
