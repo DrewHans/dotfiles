@@ -401,7 +401,7 @@
             "threshold": 0.0
         },
         "maximizer#0": {
-            "bypass": false,
+            "bypass": true,
             "ceiling": 0.0,
             "input-gain": 0.0,
             "output-gain": 0.0,
@@ -417,7 +417,18 @@
             "deesser#0",
             "echo_canceller#0",
             "compressor#0",
-            "limiter#0"
-        ]
+            "limiter#0",
+            "rnnoise#0"
+        ],
+        "rnnoise#0": {
+            "bypass": true,
+            "enable-vad": false,
+            "input-gain": 0.0,
+            "model-path": "",
+            "output-gain": 0.0,
+            "release": 20.0,
+            "vad-thres": 50.0,
+            "wet": 0.0
+        }
     }
 }
