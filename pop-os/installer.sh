@@ -71,13 +71,13 @@ cp -u ./config/nvim/init.vim ~/.var/app/io.neovim.nvim/config/nvim/
 chmod 644 ~/.var/app/io.neovim.nvim/config/nvim/init.vim
 
 # copy easyeffects profile config file to it's flatpak config directory
-mkdir -p ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output
-chmod -R 644 ./config/easyeffects
+mkdir -p ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects
+chmod -R 775 ./config/easyeffects
 cp -Ru ./config/easyeffects/. ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/
 
 # copy obs config files to it's config directory
 mkdir -p ~/.config/obs-studio
-chmod -R 644 ~/.config/obs-studio/
+chmod -R 775 ./config/obs/obs-studio
 cp -Ru ./config/obs/obs-studio/. ~/.config/obs-studio/
 
 # copy qbittorrent config files to it's flatpak config directory
