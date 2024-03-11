@@ -6,8 +6,11 @@ alias batst='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias browser='brave-browser'
 alias cdr='cd $(git rev-parse --show-toplevel)'
 alias dlaudio='yt-dlp -i -x --audio-format mp3 -o "%(title)s.%(ext)s"'
+alias dlthumb='yt-dlp --write-thumbnail --skip-download'
+alias dlvideo='yt-dlp'
 alias fix_wifi='sudo systemctl restart NetworkManager'
 alias nuke='/home/nyancat/bin/nuke.sh'
+alias open='xdg-open .'
 alias up='sudo /home/nyancat/bin/update.sh'
 
 # alias flatpak apps
@@ -38,3 +41,4 @@ alias qbittorrent='flatpak run org.qbittorrent.qBittorrent'
 alias vlc='flatpak run org.videolan.VLC'
 alias yuzu='flatpak run org.yuzu_emu.yuzu'
 alias zoom='flatpak run us.zoom.Zoom'
+
