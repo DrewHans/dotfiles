@@ -69,5 +69,5 @@
     },
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.enabled": false,
-    "editor.lightbulb.enabled": false,
+    "editor.lightbulb.enabled": "off",
 }

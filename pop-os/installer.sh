@@ -76,9 +76,9 @@ chmod -R 775 ./config/easyeffects
 cp -Ru ./config/easyeffects/. ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/
 
 # copy obs config files to it's config directory
-mkdir -p ~/.config/obs-studio
+mkdir -p ~/.var/app/com.obsproject.Studio/config/obs-studio
 chmod -R 775 ./config/obs/obs-studio
-cp -Ru ./config/obs/obs-studio/. ~/.config/obs-studio/
+cp -Ru ./config/obs/obs-studio/. ~/.var/app/com.obsproject.Studio/config/obs-studio/
 
 # copy qbittorrent config files to it's flatpak config directory
 mkdir -p ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/

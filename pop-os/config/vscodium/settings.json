@@ -17,7 +17,7 @@
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.scrollback": 100000,
     "update.mode": "none",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 3,
     "workbench.colorCustomizations": { "editorRuler.foreground": "#B4003C" },
     "workbench.colorTheme": "Default Dark+",
     "workbench.sideBar.location": "left",
@@ -73,10 +73,12 @@
     },
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.enabled": false,
-    "editor.lightbulb.enabled": false,
+    "editor.lightbulb.enabled": "off",
     "editor.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
     "terminal.integrated.gpuAcceleration": "off",
-    "window.dialogStyle": "native"
+    "window.dialogStyle": "native",
+    "workbench.startupEditor": "none",
+    "editor.stickyScroll.enabled": false
 }

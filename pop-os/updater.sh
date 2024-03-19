@@ -40,8 +40,8 @@ cp -Ru ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/input ./config/
 cp -Ru ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output ./config/easyeffects/
 
 # update repo's obs config files
-cp -u ~/.config/obs-studio/global.ini ./config/obs/obs-studio/
-cp -Ru ~/.config/obs-studio/basic ./config/obs/obs-studio/
+cp -u ~/.var/app/com.obsproject.Studio/config/obs-studio/global.ini ./config/obs/obs-studio/
+cp -Ru ~/.var/app/com.obsproject.Studio/config/obs-studio/basic ./config/obs/obs-studio/
 rm ./config/obs/obs-studio/basic/scenes/*.bak
 
 # update repo's qbittorrent config files
