@@ -39,10 +39,10 @@ cp -u ~/.var/app/io.neovim.nvim/config/nvim/init.vim ./config/nvim/
 cp -Ru ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/input ./config/easyeffects/
 cp -Ru ~/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output ./config/easyeffects/
 
-# update repo's obs config files
+# update repo's obs config files (and delete any .bak files)
 cp -u ~/.var/app/com.obsproject.Studio/config/obs-studio/global.ini ./config/obs/obs-studio/
 cp -Ru ~/.var/app/com.obsproject.Studio/config/obs-studio/basic ./config/obs/obs-studio/
-rm ./config/obs/obs-studio/basic/scenes/*.bak
+find ./config/obs/obs-studio/ -type f -name '*.bak' -delete
 
 # update repo's qbittorrent config files
 cp -u ~/.var/app/org.qbittorrent.qBittorrent/config/qBittorrent/qBittorrent.conf ./config/qbittorrent/
