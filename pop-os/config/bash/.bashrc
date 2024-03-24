@@ -146,9 +146,9 @@ fi
 
 #### Android Related
 # Add Android environment variables
-if [ -d /home/nyancat/Android/Sdk ]; then
-    export ANDROID_SDK_ROOT=/home/nyancat/Android/Sdk
-    export ANDROID_HOME=/home/nyancat/Android/Sdk
+if [ -d /home/nyancat/bin/android/sdk ]; then
+    export ANDROID_SDK_ROOT=/home/nyancat/bin/android/sdk
+    export ANDROID_HOME=/home/nyancat/bin/android/sdk
 fi
 
 # Add Android build-tools to path
@@ -179,4 +179,9 @@ fi
 # Add gradle to path
 if [ -d /opt/gradle/gradle-7.5.1/bin ]; then
     export PATH=${PATH}:/opt/gradle/gradle-7.5.1/bin
+fi
+
+# Add Rust cargo env
+if [ -d /home/nyancat/.cargo/ ]; then
+	. "/home/nyancat/.cargo/env"
 fi
