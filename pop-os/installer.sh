@@ -16,6 +16,11 @@ echo "Installing dotfiles"
 
 # TODO: make install.sh files and separate apart this ball of mud
 
+# copy autostart files
+mkdir -p ~/.config/autostart
+chmod -R 755 ./config/autostart
+cp -Ru ./config/autostart/. ~/.config/autostart/
+
 # copy bash aliases
 cp -u ./config/bash/.bash_aliases ~/
 chmod 644 ~/.bash_aliases
