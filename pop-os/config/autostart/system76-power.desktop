@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=system76-power profile battery
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Set Power Profile to Battery Life
+Name=Set Power Profile to Battery Life
+Comment[en_US]=Automatically change power profile to battery life at login
+Comment=Automatically change power profile to battery life at login
